@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags -->
-    <title>RootPass — Gestionnaire de mots de passe local & open source</title>
+    <title>RootPass</title>
     <meta
       name="description"
       content="RootPass : la sécurité d'un bunker, l'ergonomie de 2026. Chiffrement AES-256-GCM, 2FA natif, 100 % local, zéro cloud, zéro télémétrie."
@@ -16,7 +15,6 @@
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href="https://rootpass.vercel.app/" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="RootPass" />
@@ -29,7 +27,10 @@
       property="og:description"
       content="La sécurité d'un bunker. L'ergonomie de 2026. 100 % local, 0 % cloud, zéro télémétrie."
     />
-    <meta property="og:image" content="https://rootpass.vercel.app/og-image.png" />
+    <meta
+      property="og:image"
+      content="https://rootpass.vercel.app/og-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
@@ -37,7 +38,6 @@
       content="RootPass — gestionnaire de mots de passe local et open source"
     />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -47,15 +47,16 @@
       name="twitter:description"
       content="La sécurité d'un bunker. L'ergonomie de 2026. 100 % local, 0 % cloud, zéro télémétrie."
     />
-    <meta name="twitter:image" content="https://rootpass.vercel.app/og-image.png" />
+    <meta
+      name="twitter:image"
+      content="https://rootpass.vercel.app/og-image.png"
+    />
 
-    <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Fonts : préconnexion + chargement optimisé (display=swap pour le LCP) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,7 +64,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
     />
 
-    <!-- Structured Data : SoftwareApplication -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -87,31 +87,36 @@
   </head>
 
   <body class="text-zinc-300 selection:bg-emerald-500/30 selection:text-white">
-    <!-- Lien d'évitement (accessibilité clavier) -->
     <a
       href="#features"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-emerald-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-zinc-950"
       >Aller au contenu principal</a
     >
 
-    <!-- ===================== HEADER / NAVBAR ===================== -->
     <header class="fixed inset-x-0 top-0 z-40">
       <div
-        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         style="
           background: rgba(8, 8, 10, 0.6);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
         "
       >
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2.5" aria-label="RootPass — accueil">
+        <a
+          href="/"
+          class="flex items-center gap-2.5"
+          aria-label="RootPass — accueil"
+        >
           <img src="/logo.svg" alt="" width="36" height="36" class="h-9 w-9" />
-          <span class="text-lg font-bold tracking-tight text-white">RootPass</span>
+          <span class="text-lg font-bold tracking-tight text-white"
+            >RootPass</span
+          >
         </a>
 
-        <!-- Liens -->
-        <nav class="flex items-center gap-2 sm:gap-3" aria-label="Navigation principale">
+        <nav
+          class="flex items-center gap-2 sm:gap-3"
+          aria-label="Navigation principale"
+        >
           <a
             href="#features"
             class="hidden rounded-full px-4 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white sm:inline-flex"
@@ -139,9 +144,7 @@
     </header>
 
     <main>
-      <!-- ===================== HERO ===================== -->
       <section class="relative overflow-hidden px-6 pb-24 pt-40 sm:pt-48">
-        <!-- Glow effect -->
         <div
           aria-hidden="true"
           class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[420px] w-[760px] max-w-[90vw] -translate-x-1/2 -translate-y-1/3 rounded-full bg-emerald-500/10 blur-[130px]"
@@ -149,31 +152,35 @@
 
         <div class="mx-auto max-w-3xl text-center">
           <p
-            class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 text-xs font-medium text-zinc-400"
+            class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 text-sm font-medium text-zinc-400"
           >
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
             100 % local · Zéro cloud · Zéro télémétrie
           </p>
 
           <h1
-            class="text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-6xl"
+            class="text-balance text-4xl font-extrabold leading-[1] tracking-tight text-white sm:text-5xl"
           >
             Le gestionnaire de mots de passe<br class="hidden sm:block" />
             que vous attendiez.
           </h1>
 
-          <p class="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-zinc-400">
+          <p
+            class="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-zinc-400"
+          >
             La sécurité d'un bunker. L'ergonomie de 2026.
             <span class="text-zinc-200">100 % local, 0 % cloud.</span>
           </p>
 
-          <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div
+            class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
             <a
               href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
               class="btn-primary w-full sm:w-auto"
               aria-label="Télécharger RootPass pour Windows"
             >
-              <i data-lucide="download" class="h-5 w-5"></i>
+              <i data-lucide="download" class="h-3 w-5"></i>
               Télécharger pour Windows
             </a>
             <a
@@ -188,15 +195,18 @@
             </a>
           </div>
 
-          <p class="mt-6 font-mono text-xs text-zinc-600">
+          <p class="mt-6 font-mono text-sm text-zinc-600">
             Open Source · Licence MIT · Gratuit pour toujours
           </p>
         </div>
       </section>
 
-      <!-- ===================== BENTO GRID / FEATURES ===================== -->
-      <section id="features" class="px-6 py-12 sm:py-20" aria-labelledby="features-title">
-        <div class="mx-auto max-w-6xl">
+      <section
+        id="features"
+        class="px-6 py-12 sm:py-20"
+        aria-labelledby="features-title"
+      >
+        <div class="mx-auto max-w-7xl">
           <div class="mx-auto mb-14 max-w-2xl text-center">
             <h2
               id="features-title"
@@ -206,49 +216,52 @@
               Pensé pour le quotidien.
             </h2>
             <p class="mt-4 text-zinc-400">
-              Toutes les garanties d'un coffre-fort chiffré, sans aucun compromis sur le confort.
+              Toutes les garanties d'un coffre-fort chiffré, sans aucun
+              compromis sur le confort.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Chiffrement (large) -->
-            <article class="bento-card sm:col-span-2 lg:row-span-2 lg:flex lg:flex-col lg:justify-between">
-              <div>
-                <span
-                  class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-                >
-                  <i data-lucide="lock" class="h-5 w-5"></i>
-                </span>
-                <h3 class="text-xl font-semibold text-white">Chiffrement inviolable</h3>
-                <p class="mt-3 max-w-md text-zinc-400">
-                  Votre coffre est protégé par <strong class="text-zinc-200">AES-256-GCM</strong>,
-                  le même standard que les agences gouvernementales. La clé est dérivée à la volée à
-                  partir de votre Master Password — elle n'est jamais stockée, nulle part.
-                </p>
-              </div>
+          <div class="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2">
+            <article class="bento-card flex flex-col">
+              <span
+                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
+              >
+                <i data-lucide="lock" class="h-5 w-5"></i>
+              </span>
+              <h3 class="text-lg font-semibold text-white">
+                Chiffrement inviolable
+              </h3>
+              <p class="mt-3 text-zinc-400 text-[15px]">
+                Votre coffre est protégé par
+                <strong class="text-zinc-200">AES-256-GCM</strong>, le même
+                standard que les agences gouvernementales. La clé est dérivée à
+                la volée à partir de votre Master Password — elle n'est jamais
+                stockée, nulle part.
+              </p>
               <p
-                class="mt-6 inline-block rounded-lg border border-white/[0.06] bg-black/30 px-4 py-2 font-mono text-sm text-emerald-300"
+                class="mt-6 inline-block self-start rounded-lg border border-white/[0.06] bg-black/30 px-4 py-2 font-mono text-xs text-emerald-300"
               >
                 AES-256-GCM · clé dérivée au vol
               </p>
             </article>
 
-            <!-- Cloud vous appartient -->
             <article class="bento-card">
               <span
                 class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
               >
                 <i data-lucide="cloud-off" class="h-5 w-5"></i>
               </span>
-              <h3 class="text-lg font-semibold text-white">Le cloud vous appartient</h3>
-              <p class="mt-3 text-zinc-400">
-                Synchronisez via votre propre OneDrive, Dropbox ou une simple clé USB.
-                <strong class="text-zinc-200">Zéro serveur central</strong>, vos données ne quittent
-                jamais votre contrôle.
+              <h3 class="text-lg font-semibold text-white">
+                Le cloud vous appartient
+              </h3>
+              <p class="mt-3 text-zinc-400 text-[15px]">
+                Synchronisez via votre propre OneDrive, Dropbox ou une simple
+                clé USB.
+                <strong class="text-zinc-200">Zéro serveur central</strong>, vos
+                données ne quittent jamais votre contrôle.
               </p>
             </article>
 
-            <!-- 2FA natif -->
             <article class="bento-card">
               <span
                 class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
@@ -256,78 +269,369 @@
                 <i data-lucide="shield-check" class="h-5 w-5"></i>
               </span>
               <h3 class="text-lg font-semibold text-white">2FA natif</h3>
-              <p class="mt-3 text-zinc-400">
-                Générez vos codes <strong class="text-zinc-200">TOTP</strong> directement dans
-                l'application. Plus besoin d'une app tierce pour votre double authentification.
+              <p class="mt-3 text-zinc-400 text-[15px]">
+                Générez vos codes
+                <strong class="text-zinc-200">TOTP</strong> directement dans
+                l'application. Plus besoin d'une app tierce pour votre double
+                authentification.
               </p>
             </article>
 
-            <!-- Recherche Spotlight (large) -->
-            <article class="bento-card sm:col-span-2">
-              <div class="flex items-start justify-between gap-6">
-                <div>
-                  <span
-                    class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-                  >
-                    <i data-lucide="search" class="h-5 w-5"></i>
-                  </span>
-                  <h3 class="text-lg font-semibold text-white">Recherche Spotlight</h3>
-                  <p class="mt-3 max-w-md text-zinc-400">
-                    Un raccourci global pour tout retrouver en une seconde, sans même ouvrir la
-                    fenêtre principale. Tapez, trouvez, collez.
-                  </p>
-                </div>
-                <kbd
-                  class="hidden shrink-0 items-center gap-1 rounded-lg border border-white/[0.08] bg-black/30 px-3 py-2 font-mono text-sm text-zinc-300 sm:inline-flex"
-                >
-                  Ctrl + Shift + Space
-                </kbd>
-              </div>
+            <article class="bento-card flex flex-col">
+              <span
+                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
+              >
+                <i data-lucide="search" class="h-5 w-5"></i>
+              </span>
+              <h3 class="text-lg font-semibold text-white">
+                Recherche Spotlight
+              </h3>
+              <p class="mt-3 text-zinc-400 text-[15px]">
+                Un raccourci global pour tout retrouver en une seconde, sans
+                même ouvrir la fenêtre principale. Tapez, trouvez, collez.
+              </p>
+              <kbd
+                class="mt-6 inline-flex w-fit items-center gap-1 rounded-lg border border-white/[0.08] bg-black/30 px-3 py-2 font-mono text-xs text-zinc-300"
+              >
+                Ctrl + Shift + Space
+              </kbd>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===================== CTA FINAL ===================== -->
-      <section class="px-6 py-16 sm:py-24" aria-labelledby="cta-title">
-        <div
-          class="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] px-6 py-16 text-center"
-        >
-          <div
-            aria-hidden="true"
-            class="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[500px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-[130px]"
-          ></div>
-          <h2 id="cta-title" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Reprenez le contrôle de vos secrets.
-          </h2>
-          <p class="mx-auto mt-4 max-w-xl text-zinc-400">
-            Téléchargez RootPass, importez votre base KeePass et oubliez le cloud.
-          </p>
-          <div class="mt-8 flex justify-center">
-            <a
-              href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
-              class="btn-primary"
-              aria-label="Télécharger RootPass pour Windows"
+      <section
+        id="telechargement"
+        class="px-6 pb-16 sm:pb-24"
+        aria-labelledby="download-help-title"
+      >
+        <div class="mx-auto max-w-5xl">
+          <div class="mx-auto mb-10 max-w-2xl text-center">
+            <h2
+              id="download-help-title"
+              class="text-2xl font-bold tracking-tight text-white sm:text-3xl"
             >
-              <i data-lucide="download" class="h-5 w-5"></i>
-              Télécharger pour Windows
-            </a>
+              Télécharger en toute confiance
+            </h2>
+            <p class="mt-3 text-zinc-400">
+              Open source, builds publics et vérifiables. Voici comment
+              installer en quelques secondes.
+            </p>
+          </div>
+
+          <!-- Bloc 3 — Note de réassurance -->
+          <div
+            class="mt-4 flex items-start gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/[0.04] px-5 py-4"
+          >
+            <i
+              data-lucide="info"
+              class="mt-0.5 h-5 w-5 shrink-0 text-amber-400"
+            ></i>
+            <p class="text-[16px] leading-relaxed text-zinc-400">
+              <strong class="text-amber-300"
+                >« Éditeur inconnu » au lancement ? C'est normal.</strong
+              >
+              <br />
+              RootPass n'est pas signé avec un certificat payant : votre système
+              affiche donc un avertissement, comme pour la plupart des apps open
+              source. Le code et les builds étant entièrement publics, vous
+              pouvez vérifier vous-même qu'il n'y a rien à cacher.
+              <br />
+              <br />
+              Suivez le guide de "Transparence et vérification" ci-dessous pour
+              être sûr à 100 % de l'intégrité de votre téléchargement. Si vous
+              avez la moindre question, n'hésitez pas à ouvrir une issue sur
+              GitHub.
+              <br />
+              (Non obligatoire !)
+            </p>
+          </div>
+          <div class="grid items-start gap-6 md:grid-cols-2 py-15">
+            <!-- Bloc 2 — Guide d'installation -->
+            <article
+              class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8"
+            >
+              <div class="flex items-center justify-center gap-3">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
+                >
+                  <i data-lucide="download" class="h-5 w-5"></i>
+                </span>
+                <h3 class="text-lg font-semibold text-white">
+                  Installation rapide
+                </h3>
+              </div>
+
+              <div class="mt-8 space-y-8">
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
+                    Windows
+                  </p>
+                  <ol
+                    class="mt-2 list-decimal space-y-1 pl-5 text-[16px] leading-relaxed text-zinc-400 marker:text-zinc-600"
+                  >
+                    <li>
+                      Lancez le fichier
+                      <code class="font-mono text-zinc-300">.exe</code>.
+                    </li>
+                    <li>
+                      Sur l'écran SmartScreen, cliquez sur
+                      <em class="not-italic text-zinc-300"
+                        >Informations complémentaires</em
+                      >.
+                    </li>
+                    <li>
+                      Cliquez sur
+                      <em class="not-italic text-zinc-300"
+                        >Exécuter quand même</em
+                      >.
+                    </li>
+                  </ol>
+                </div>
+
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
+                    macOS
+                  </p>
+                  <ol
+                    class="mt-2 list-decimal space-y-1 pl-5 text-[16px] leading-relaxed text-zinc-400 marker:text-zinc-600"
+                  >
+                    <li>
+                      Ouvrez le fichier
+                      <code class="font-mono text-zinc-300">.dmg</code>.
+                    </li>
+                    <li>
+                      Faites un
+                      <em class="not-italic text-zinc-300">clic droit</em>
+                      sur l'application puis
+                      <em class="not-italic text-zinc-300">Ouvrir</em>.
+                    </li>
+                    <li>Confirmez l'ouverture dans la fenêtre qui apparaît.</li>
+                  </ol>
+                </div>
+
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
+                    Linux
+                  </p>
+                  <p class="mt-2 text-[16px] leading-relaxed text-zinc-400">
+                    Rendez l'AppImage exécutable, ou installez le paquet
+                    <code class="font-mono text-zinc-300">.deb</code> :
+                  </p>
+                  <p
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
+                  >
+                    chmod +x RootPass*.AppImage &amp;&amp; ./RootPass*.AppImage
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Bloc 1 — Confiance / Transparence (pleine largeur) -->
+            <article
+              class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8"
+            >
+              <div class="flex items-center justify-center gap-3">
+                <span
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
+                >
+                  <i data-lucide="shield-check" class="h-5 w-5"></i>
+                </span>
+                <h3 class="text-lg font-semibold text-white">
+                  Transparent et vérifiable
+                </h3>
+              </div>
+              <p
+                class="mx-auto mt-4 max-w-3xl text-center text-[16px] leading-relaxed text-zinc-400"
+              >
+                RootPass est
+                <a
+                  href="https://github.com/xkddn/RootPass-App"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-emerald-400 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-300"
+                  >100 % open source</a
+                >. Chaque installeur est compilé automatiquement par GitHub
+                Actions à partir du code public, rien n'est ajouté à la main,
+                tout est traçable.
+              </p>
+
+              <div class="mt-8 space-y-8">
+                <!-- Windows : téléchargement + vérification du checksum -->
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
+                    Windows
+                  </p>
+                  <a
+                    id="download-exe"
+                    href="https://github.com/xkddn/RootPass-App/releases/latest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
+                  >
+                    <i data-lucide="download" class="h-4 w-4"></i>
+                    Télécharger le .exe
+                  </a>
+                  <p class="mt-3 text-[14px] text-zinc-500">
+                    Vérifiez l'intégrité : lancez cette commande dans
+                    PowerShell, puis comparez à l'empreinte officielle.
+                  </p>
+                  <p
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
+                  >
+                    certutil -hashfile &lt;fichier&gt; SHA256
+                  </p>
+                  <p
+                    id="checksum-exe"
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
+                  >
+                    Chargement…
+                  </p>
+                </div>
+
+                <!-- macOS : téléchargement + vérification du checksum -->
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
+                    macOS
+                  </p>
+                  <a
+                    id="download-dmg"
+                    href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.dmg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
+                  >
+                    <i data-lucide="download" class="h-4 w-4"></i>
+                    Télécharger le .dmg
+                  </a>
+                  <p class="mt-3 text-[14px] text-zinc-500">
+                    Vérifiez l'intégrité : lancez cette commande dans le
+                    Terminal, puis comparez à l'empreinte officielle.
+                  </p>
+                  <p
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
+                  >
+                    shasum -a 256 &lt;fichier&gt;
+                  </p>
+                  <p
+                    id="checksum-dmg"
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
+                  >
+                    Chargement…
+                  </p>
+                </div>
+
+                <!-- Linux : téléchargement + vérification du checksum -->
+                <div>
+                  <p
+                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                  >
+                    <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
+                    Linux
+                  </p>
+                  <a
+                    id="download-linux"
+                    href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.AppImage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
+                  >
+                    <i data-lucide="download" class="h-4 w-4"></i>
+                    Télécharger (AppImage / .deb)
+                  </a>
+                  <p class="mt-3 text-[14px] text-zinc-500">
+                    Vérifiez l'intégrité : lancez cette commande dans le
+                    terminal, puis comparez à l'empreinte officielle.
+                  </p>
+                  <p
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
+                  >
+                    sha256sum &lt;fichier&gt;
+                  </p>
+                  <p
+                    id="checksum-linux"
+                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
+                  >
+                    Chargement…
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-6 text-[16px] leading-relaxed text-zinc-400">
+                Vous pouvez aussi consulter l'analyse antivirus indépendante sur
+                <a
+                  href="&lt;LIEN_VIRUSTOTAL_ICI&gt;"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-emerald-400 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-300"
+                  >VirusTotal</a
+                >.
+              </p>
+            </article>
+          </div>
+
+          <div
+            role="alert"
+            class="mt-8 flex items-start gap-3.5 rounded-xl border border-red-500/25 bg-red-500/[0.06] px-5 py-4"
+          >
+            <i
+              data-lucide="circle-alert"
+              class="mt-0.5 h-5 w-5 shrink-0 text-red-400/90"
+            ></i>
+            <p class="text-[15px] leading-relaxed text-zinc-300">
+              <strong class="font-semibold text-red-300"
+                >Important : Sauvegardez votre Master Password !!!!</strong
+              >
+              <br />
+              Si vous le perdez, le coffre est
+              <strong class="font-semibold text-white">IRRÉCUPÉRABLE</strong>.
+              Aucune réinitialisation est possible, meme par moi. C'est le prix
+              du chiffrement de bout en bout. Soyez intelligent·e, notez-le
+              quelque part de sûr et tout ira bien.
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer class="border-t border-white/[0.06] px-6 py-12">
-      <div class="mx-auto max-w-6xl">
-        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="flex flex-col items-center justify-between gap-6 sm:flex-row"
+        >
           <div class="flex items-center gap-2.5">
-            <img src="/logo.svg" alt="" width="32" height="32" class="h-8 w-8" />
+            <img
+              src="/logo.svg"
+              alt=""
+              width="32"
+              height="32"
+              class="h-8 w-8"
+            />
             <span class="font-semibold text-white">RootPass</span>
-            <span class="font-mono text-xs text-zinc-600">· 100 % Open Source · Licence MIT</span>
+            <span class="font-mono text-xs text-zinc-600"
+              >· 100 % Open Source · Licence MIT</span
+            >
           </div>
 
-          <nav class="flex items-center gap-5 text-sm" aria-label="Liens du pied de page">
+          <nav
+            class="flex items-center gap-5 text-sm"
+            aria-label="Liens du pied de page"
+          >
             <a
               href="https://github.com/xkddn/RootPass-App"
               target="_blank"
@@ -352,20 +656,9 @@
           </nav>
         </div>
 
-        <!-- Avertissement -->
-        <div
-          class="mt-8 flex items-start gap-3 rounded-xl border border-amber-500/10 bg-amber-500/[0.03] px-4 py-3"
-        >
-          <i data-lucide="circle-alert" class="mt-0.5 h-4 w-4 shrink-0 text-amber-400/80"></i>
-          <p class="text-sm text-zinc-500">
-            Si vous perdez votre Master Password, le coffre est
-            <strong class="text-zinc-400">irrécupérable</strong>. Aucune porte dérobée, aucune
-            réinitialisation — c'est le prix du chiffrement de bout en bout.
-          </p>
-        </div>
-
         <p class="mt-8 text-center text-xs text-zinc-600">
-          © <span id="current-year">2026</span> RootPass. Tous droits réservés sous licence MIT.
+          © <span id="current-year">2026</span> RootPass. Tous droits réservés
+          sous licence MIT.
         </p>
       </div>
     </footer>
