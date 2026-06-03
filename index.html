@@ -317,6 +317,41 @@
               Open source, builds publics et vérifiables. Voici comment
               installer en quelques secondes.
             </p>
+
+            <div
+              class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            >
+              <a
+                id="download-exe"
+                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 sm:w-auto"
+              >
+                <i data-lucide="monitor" class="h-4 w-4"></i>
+                Windows (.exe)
+              </a>
+              <a
+                id="download-dmg"
+                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.dmg"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 sm:w-auto"
+              >
+                <i data-lucide="apple" class="h-4 w-4"></i>
+                macOS (.dmg)
+              </a>
+              <a
+                id="download-linux"
+                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.AppImage"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 sm:w-auto"
+              >
+                <i data-lucide="terminal" class="h-4 w-4"></i>
+                Linux (AppImage / .deb)
+              </a>
+            </div>
           </div>
 
           <!-- Bloc 3 — Note de réassurance -->
@@ -474,16 +509,6 @@
                     <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
                     Windows
                   </p>
-                  <a
-                    id="download-exe"
-                    href="https://github.com/xkddn/RootPass-App/releases/latest"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
-                  >
-                    <i data-lucide="download" class="h-4 w-4"></i>
-                    Télécharger le .exe
-                  </a>
                   <p class="mt-3 text-[14px] text-zinc-500">
                     Vérifiez l'intégrité : lancez cette commande dans
                     PowerShell, puis comparez à l'empreinte officielle.
@@ -509,16 +534,6 @@
                     <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
                     macOS
                   </p>
-                  <a
-                    id="download-dmg"
-                    href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.dmg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
-                  >
-                    <i data-lucide="download" class="h-4 w-4"></i>
-                    Télécharger le .dmg
-                  </a>
                   <p class="mt-3 text-[14px] text-zinc-500">
                     Vérifiez l'intégrité : lancez cette commande dans le
                     Terminal, puis comparez à l'empreinte officielle.
@@ -544,16 +559,6 @@
                     <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
                     Linux
                   </p>
-                  <a
-                    id="download-linux"
-                    href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.AppImage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="mt-3 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20"
-                  >
-                    <i data-lucide="download" class="h-4 w-4"></i>
-                    Télécharger (AppImage / .deb)
-                  </a>
                   <p class="mt-3 text-[14px] text-zinc-500">
                     Vérifiez l'intégrité : lancez cette commande dans le
                     terminal, puis comparez à l'empreinte officielle.
@@ -572,7 +577,7 @@
                 </div>
               </div>
 
-              <p class="mt-6 text-[16px] leading-relaxed text-zinc-400">
+              <!-- <p class="mt-6 text-[16px] leading-relaxed text-zinc-400">
                 Vous pouvez aussi consulter l'analyse antivirus indépendante sur
                 <a
                   href="&lt;LIEN_VIRUSTOTAL_ICI&gt;"
@@ -581,7 +586,7 @@
                   class="font-medium text-emerald-400 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-300"
                   >VirusTotal</a
                 >.
-              </p>
+              </p> -->
             </article>
           </div>
 
