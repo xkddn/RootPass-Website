@@ -1,0 +1,21 @@
+{
+  "name": "rootpass-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing page for RootPass — the security of a bunker, the ergonomics of 2026. 100% local, 0% cloud.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "lucide": "^0.544.0"
+  }
+}

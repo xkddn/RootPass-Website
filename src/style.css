@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   RootPass — Design System (Tailwind CSS v4 @theme)
+   Police principale : Poppins · Monospace pour les éléments techniques
+   Fond global : #08080A · Accent : Emerald
+---------------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --color-base: #08080a;
+  --color-emerald-primary: #10b981;
+  --color-emerald-hover: #34d399;
+
+  --shadow-glow: 0 10px 40px -10px rgba(16, 185, 129, 0.2);
+}
+
+/* Fond global + lissage typographique */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect des préférences de mouvement réduit (accessibilité) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Composants utilitaires du Design System ------------------------------------ */
+@layer components {
+  /* Bouton primaire — téléchargement */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#10b981] px-7 py-3.5
+           font-bold text-zinc-950 transition-all duration-200 ease-out
+           hover:bg-[#34d399] focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-emerald-400;
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.2);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 38px rgba(16, 185, 129, 0.28);
+  }
+
+  /* Bouton secondaire — GitHub */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5
+           font-medium text-zinc-500 transition-all duration-200 ease-out
+           hover:text-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-zinc-600;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  /* Card / Bento box */
+  .bento-card {
+    @apply relative overflow-hidden rounded-2xl p-7 transition-all duration-300 ease-out;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .bento-card:hover {
+    border-color: rgba(16, 185, 129, 0.25);
+    background-color: rgba(255, 255, 255, 0.035);
+  }
+}
