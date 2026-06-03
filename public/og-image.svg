@@ -38,5 +38,5 @@
   <text x="92" y="545" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="400" fill="#a1a1aa">100 % local  ·  0 % cloud  ·  0 % télémétrie</text>
 
   <!-- URL -->
-  <text x="1110" y="570" text-anchor="end" font-family="Consolas, monospace" font-size="22" fill="#52525b">rootpass.vercel.app</text>
+  <text x="1110" y="570" text-anchor="end" font-family="Consolas, monospace" font-size="22" fill="#52525b">root-pass-website.vercel.app</text>
 </svg>
