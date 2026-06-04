@@ -14,6 +14,7 @@ import {
   Terminal,
   Info,
   Globe,
+  MessageCircle,
 } from 'lucide'
 
 // Rend uniquement les icônes utilisées (tree-shaking friendly)
@@ -32,6 +33,7 @@ createIcons({
     Terminal,
     Info,
     Globe,
+    MessageCircle,
   },
   attrs: {
     'stroke-width': 1.6,
@@ -233,6 +235,15 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear())
     'footer.tagline': '· 100% Open Source · MIT License',
     'footer.source': 'Source code',
     'footer.rights': 'RootPass. All rights reserved under the MIT License.',
+
+    'nav.download': 'Download',
+    'nav.contact': 'Contact',
+    'contact.title': 'A question? An idea?',
+    'contact.subtitle':
+      'Whether it is a bug, a suggestion or just to say hi — GitHub is the best place to reach me.',
+    'contact.btnProfile': 'My GitHub profile',
+    'contact.btnIssue': 'Open an issue',
+    'contact.note': 'Usually replies within 24–48 h.',
   }
 
   const nodes = document.querySelectorAll('[data-i18n]')
