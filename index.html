@@ -257,7 +257,10 @@
               >
                 Chiffrement inviolable
               </h3>
-              <p class="mt-3 text-zinc-400 text-[15px]" data-i18n="card.encryption.body">
+              <p
+                class="mt-3 text-zinc-400 text-[15px]"
+                data-i18n="card.encryption.body"
+              >
                 Votre coffre est protégé par
                 <strong class="text-zinc-200">AES-256-GCM</strong>, le même
                 standard que les agences gouvernementales. La clé est dérivée à
@@ -284,7 +287,10 @@
               >
                 Le cloud vous appartient
               </h3>
-              <p class="mt-3 text-zinc-400 text-[15px]" data-i18n="card.cloud.body">
+              <p
+                class="mt-3 text-zinc-400 text-[15px]"
+                data-i18n="card.cloud.body"
+              >
                 Synchronisez via votre propre OneDrive, Dropbox ou une simple
                 clé USB.
                 <strong class="text-zinc-200">Zéro serveur central</strong>, vos
@@ -304,7 +310,10 @@
               >
                 2FA natif
               </h3>
-              <p class="mt-3 text-zinc-400 text-[15px]" data-i18n="card.totp.body">
+              <p
+                class="mt-3 text-zinc-400 text-[15px]"
+                data-i18n="card.totp.body"
+              >
                 Générez vos codes
                 <strong class="text-zinc-200">TOTP</strong> directement dans
                 l'application. Plus besoin d'une app tierce pour votre double
@@ -324,7 +333,10 @@
               >
                 Recherche Spotlight
               </h3>
-              <p class="mt-3 text-zinc-400 text-[15px]" data-i18n="card.spotlight.body">
+              <p
+                class="mt-3 text-zinc-400 text-[15px]"
+                data-i18n="card.spotlight.body"
+              >
                 Un raccourci global pour tout retrouver en une seconde, sans
                 même ouvrir la fenêtre principale. Tapez, trouvez, collez.
               </p>
@@ -401,7 +413,10 @@
               data-lucide="info"
               class="mt-0.5 h-5 w-5 shrink-0 text-amber-400"
             ></i>
-            <p class="text-[16px] leading-relaxed text-zinc-400" data-i18n="download.note">
+            <p
+              class="text-[16px] leading-relaxed text-zinc-400"
+              data-i18n="download.note"
+            >
               <strong class="text-amber-300"
                 >« Éditeur inconnu » au lancement ? C'est normal.</strong
               >
@@ -416,8 +431,6 @@
               être sûr à 100 % de l'intégrité de votre téléchargement. Si vous
               avez la moindre question, n'hésitez pas à ouvrir une issue sur
               GitHub.
-              <br />
-              (Non obligatoire !)
             </p>
           </div>
           <div class="grid items-start gap-6 md:grid-cols-2 py-15">
@@ -535,6 +548,15 @@
                   Transparent et vérifiable
                 </h3>
               </div>
+              <div class="mt-2.5 flex justify-center">
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 text-[11px] font-medium text-amber-300/90"
+                  data-i18n="verify.optional"
+                >
+                  <i data-lucide="info" class="h-3 w-3"></i>
+                  Optionnel ! Seulement si tu veux vérifier l'intégrité de l'app
+                </span>
+              </div>
               <p
                 class="mx-auto mt-4 max-w-3xl text-center text-[16px] leading-relaxed text-zinc-400"
                 data-i18n="verify.body"
@@ -560,7 +582,10 @@
                     <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
                     Windows
                   </p>
-                  <p class="mt-3 text-[14px] text-zinc-500" data-i18n="verify.win.desc">
+                  <p
+                    class="mt-3 text-[14px] text-zinc-500"
+                    data-i18n="verify.win.desc"
+                  >
                     Vérifiez l'intégrité : lancez cette commande dans
                     PowerShell, puis comparez à l'empreinte officielle.
                   </p>
@@ -585,7 +610,10 @@
                     <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
                     macOS
                   </p>
-                  <p class="mt-3 text-[14px] text-zinc-500" data-i18n="verify.mac.desc">
+                  <p
+                    class="mt-3 text-[14px] text-zinc-500"
+                    data-i18n="verify.mac.desc"
+                  >
                     Vérifiez l'intégrité : lancez cette commande dans le
                     Terminal, puis comparez à l'empreinte officielle.
                   </p>
@@ -610,7 +638,10 @@
                     <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
                     Linux
                   </p>
-                  <p class="mt-3 text-[14px] text-zinc-500" data-i18n="verify.linux.desc">
+                  <p
+                    class="mt-3 text-[14px] text-zinc-500"
+                    data-i18n="verify.linux.desc"
+                  >
                     Vérifiez l'intégrité : lancez cette commande dans le
                     terminal, puis comparez à l'empreinte officielle.
                   </p>
@@ -649,7 +680,10 @@
               data-lucide="circle-alert"
               class="mt-0.5 h-5 w-5 shrink-0 text-red-400/90"
             ></i>
-            <p class="text-[15px] leading-relaxed text-zinc-300" data-i18n="alert.master">
+            <p
+              class="text-[15px] leading-relaxed text-zinc-300"
+              data-i18n="alert.master"
+            >
               <strong class="font-semibold text-red-300"
                 >Important : Sauvegardez votre Master Password !!!!</strong
               >
@@ -679,7 +713,9 @@
               class="h-8 w-8"
             />
             <span class="font-semibold text-white">RootPass</span>
-            <span class="font-mono text-xs text-zinc-600" data-i18n="footer.tagline"
+            <span
+              class="font-mono text-xs text-zinc-600"
+              data-i18n="footer.tagline"
               >· 100 % Open Source · Licence MIT</span
             >
           </div>
