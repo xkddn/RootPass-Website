@@ -208,6 +208,7 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear())
     'download.title': 'Download with confidence',
     'download.subtitle':
       'Open source, with public and verifiable builds. Here is how to install in a few seconds.',
+    'download.mac.soon': 'macOS — Still in development, coming soon!',
     'download.note':
       '<strong class="text-amber-300">"Unknown publisher" on launch? That is normal.</strong><br>RootPass is not signed with a paid certificate, so your system shows a warning, just like most open source apps. Since the code and the builds are fully public, you can check for yourself that there is nothing to hide.<br><br>Follow the "Transparent and verifiable" guide below to be 100% sure your download is safe. If you have any question, feel free to open an issue on GitHub.',
 
