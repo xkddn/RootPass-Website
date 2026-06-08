@@ -1,35 +1,40 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------------------------------
-   RootPass — Design System (Tailwind CSS v4 @theme)
-   Police principale : Poppins · Monospace pour les éléments techniques
-   Fond global : #08080A · Accent : Emerald
+   RootPass — Design System v2 « Fiche technique / blueprint editorial »
+   Theme sombre charcoal · Fraunces (display) + JetBrains Mono (UI/texte)
+   Accent : vert plat, sans glow.
 ---------------------------------------------------------------------------- */
 @theme {
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: "JetBrains Mono", ui-monospace, monospace;
 
-  --color-base: #08080a;
-  --color-emerald-primary: #10b981;
-  --color-emerald-hover: #34d399;
-
-  --shadow-glow: 0 10px 40px -10px rgba(16, 185, 129, 0.2);
+  --color-paper: #16171a;
+  --color-panel: #1d1f23;
+  --color-ink: #e9e7e0;
+  --color-muted: #9b988f;
+  --color-faint: #6d6b64;
+  --color-accent: #1fb87a;
+  --color-accent-bright: #2dd592;
+  --color-line: #ffffff;
 }
 
-/* Fond global + lissage typographique */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-base);
-  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Respect des préférences de mouvement réduit (accessibilité) */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -42,45 +47,83 @@ body {
   }
 }
 
-/* Composants utilitaires du Design System ------------------------------------ */
 @layer components {
-  /* Bouton primaire — téléchargement */
+  /* Etiquette mono en capitales — repere technique */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-muted);
+  }
+
+  /* Titres serif — caractere editorial */
+  .display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    color: var(--color-ink);
+  }
+
+  /* Bouton primaire — bloc plein, angles nets, inversion au survol */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#10b981] px-7 py-3.5
-           font-bold text-zinc-950 transition-all duration-200 ease-out
-           hover:bg-[#34d399] focus-visible:outline-2 focus-visible:outline-offset-2
-           focus-visible:outline-emerald-400;
-    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.2);
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3.5
+           font-mono text-sm font-semibold uppercase transition-colors duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2;
+    letter-spacing: 0.06em;
+    border-radius: 3px;
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    outline-color: var(--color-accent);
   }
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 38px rgba(16, 185, 129, 0.28);
+    background-color: var(--color-accent);
+    color: var(--color-paper);
   }
 
-  /* Bouton secondaire — GitHub */
+  /* Bouton secondaire — contour hairline */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5
-           font-medium text-zinc-500 transition-all duration-200 ease-out
-           hover:text-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2
-           focus-visible:outline-zinc-600;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3.5
+           font-mono text-sm font-medium uppercase transition-colors duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2;
+    letter-spacing: 0.06em;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-ink);
+    background-color: transparent;
+    outline-color: var(--color-ink);
   }
   .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.4);
   }
 
-  /* Card / Bento box */
-  .bento-card {
-    @apply relative overflow-hidden rounded-2xl p-7 transition-all duration-300 ease-out;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  /* Panneau bordé plat — remplace les bento glass */
+  .panel {
+    @apply relative;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: var(--color-panel);
+    border-radius: 3px;
   }
-  .bento-card:hover {
-    border-color: rgba(16, 185, 129, 0.25);
-    background-color: rgba(255, 255, 255, 0.035);
+
+  /* Bloc de code / empreinte technique */
+  .field {
+    @apply break-all font-mono text-[13px];
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 3px;
+    padding: 0.6rem 0.8rem;
+    color: var(--color-ink);
+  }
+
+  /* Lien souligne accent */
+  .link {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(31, 184, 122, 0.5);
+  }
+  .link:hover {
+    text-decoration-color: var(--color-accent);
   }
 }

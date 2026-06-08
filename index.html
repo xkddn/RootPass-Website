@@ -11,7 +11,7 @@
     />
     <meta name="author" content="RootPass" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#08080A" />
+    <meta name="theme-color" content="#16171A" />
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href="https://root-pass-website.vercel.app/" />
 
@@ -65,7 +65,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     />
 
     <script type="application/ld+json">
@@ -90,73 +90,74 @@
     </script>
   </head>
 
-  <body class="text-zinc-300 selection:bg-emerald-500/30 selection:text-white">
+  <body class="selection:bg-accent selection:text-paper">
     <a
       href="#features"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-emerald-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-zinc-950"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:font-semibold focus:text-paper"
       data-i18n="skip"
       >Aller au contenu principal</a
     >
 
-    <header class="fixed inset-x-0 top-0 z-40">
+    <header
+      class="sticky top-0 z-40 border-b border-[rgba(255,255,255,0.12)] bg-[rgba(22,23,26,0.82)] backdrop-blur-md"
+    >
       <div
-        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
-        style="
-          background: rgba(8, 8, 10, 0.6);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-        "
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8"
       >
         <a
           href="/"
-          class="flex items-center gap-2.5"
+          class="flex items-center gap-3"
           aria-label="RootPass - accueil"
         >
-          <img src="/logo.svg" alt="" width="36" height="36" class="h-9 w-9" />
-          <span class="text-lg font-bold tracking-tight text-white"
+          <img src="/logo.svg" alt="" width="30" height="30" class="h-7 w-7" />
+          <span class="font-mono text-base font-semibold tracking-tight text-ink"
             >RootPass</span
+          >
+          <span
+            class="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-faint sm:inline"
+            >/ local-first</span
           >
         </a>
 
         <nav
-          class="flex items-center gap-2 sm:gap-3"
+          class="flex items-center gap-1 sm:gap-2"
           aria-label="Navigation principale"
         >
           <a
             href="#features"
-            class="hidden rounded-full px-4 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white sm:inline-flex"
+            class="hidden px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.12em] text-muted transition-colors hover:text-ink sm:inline-flex"
             data-i18n="nav.features"
             >Fonctionnalités</a
           >
           <a
             href="#telechargement"
-            class="hidden rounded-full px-4 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white sm:inline-flex"
+            class="hidden px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.12em] text-muted transition-colors hover:text-ink sm:inline-flex"
             data-i18n="nav.download"
             >Télécharger</a
           >
           <a
             href="#contact"
-            class="hidden rounded-full px-4 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white sm:inline-flex"
+            class="hidden px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.12em] text-muted transition-colors hover:text-ink sm:inline-flex"
             data-i18n="nav.contact"
             >Contact</a
           >
           <button
             id="lang-toggle"
             type="button"
-            class="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
+            class="inline-flex items-center gap-1.5 px-2.5 py-2 font-mono text-xs font-medium uppercase tracking-[0.12em] text-muted transition-colors hover:text-ink"
             aria-label="Switch to English"
           >
-            <i data-lucide="globe" class="h-4 w-4"></i>
+            <i data-lucide="globe" class="h-3.5 w-3.5"></i>
             <span data-lang-label>EN</span>
           </button>
           <a
             href="https://github.com/xkddn/RootPass-App"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-secondary !px-4 !py-2 text-sm"
+            class="ml-1 inline-flex items-center gap-2 rounded-[3px] border border-[rgba(255,255,255,0.2)] px-3 py-2 font-mono text-xs font-medium uppercase tracking-[0.08em] text-ink transition-colors hover:bg-[rgba(255,255,255,0.06)]"
             aria-label="Voir RootPass sur GitHub"
           >
-            <i data-lucide="github" class="h-4 w-4"></i>
+            <i data-lucide="github" class="h-3.5 w-3.5"></i>
             <span class="hidden sm:inline">GitHub</span>
           </a>
         </nav>
@@ -164,189 +165,246 @@
     </header>
 
     <main>
-      <section class="relative overflow-hidden px-6 pb-24 pt-40 sm:pt-48">
+      <!-- ===================== HERO ===================== -->
+      <section class="border-b border-[rgba(255,255,255,0.12)]">
         <div
-          aria-hidden="true"
-          class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[420px] w-[760px] max-w-[90vw] -translate-x-1/2 -translate-y-1/3 rounded-full bg-emerald-500/10 blur-[130px]"
-        ></div>
+          class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.25fr_0.75fr] lg:gap-8"
+        >
+          <div>
+            <p class="eyebrow mb-7">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent-bright"></span>
+              <span data-i18n="hero.badge"
+                >100 % local · Zéro cloud · Zéro télémétrie</span
+              >
+            </p>
 
-        <div class="mx-auto max-w-3xl text-center">
-          <p
-            class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-4 py-1.5 text-sm font-medium text-zinc-400"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-            <span data-i18n="hero.badge"
-              >100 % local · Zéro cloud · Zéro télémétrie</span
+            <h1
+              class="display text-balance text-[2.6rem] font-medium sm:text-6xl"
+              data-i18n="hero.title"
             >
-          </p>
+              Le gestionnaire de mots de passe<br class="hidden sm:block" />
+              que vous attendiez.
+            </h1>
 
-          <h1
-            class="text-balance text-4xl font-extrabold leading-[1] tracking-tight text-white sm:text-5xl"
-            data-i18n="hero.title"
-          >
-            Le gestionnaire de mots de passe<br class="hidden sm:block" />
-            que vous attendiez.
-          </h1>
-
-          <p
-            class="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-zinc-400"
-            data-i18n="hero.subtitle"
-          >
-            La sécurité d'un bunker. L'ergonomie de 2026.
-            <span class="text-zinc-200">100 % local, 0 % cloud.</span>
-          </p>
-
-          <div
-            class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <a
-              href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
-              class="btn-primary w-full sm:w-auto"
-              aria-label="Télécharger RootPass pour Windows"
+            <p
+              class="mt-7 max-w-md text-pretty text-[15px] leading-relaxed text-muted"
+              data-i18n="hero.subtitle"
             >
-              <i data-lucide="download" class="h-3 w-5"></i>
-              <span data-i18n="hero.btnDownload">Télécharger pour Windows</span>
-            </a>
-            <a
-              href="https://github.com/xkddn/RootPass-App"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-secondary w-full sm:w-auto"
-              aria-label="Voir le code source de RootPass sur GitHub"
+              La sécurité d'un bunker. L'ergonomie de 2026.
+              <span class="text-ink">100 % local, 0 % cloud.</span>
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
+                class="btn-primary w-full sm:w-auto"
+                aria-label="Télécharger RootPass pour Windows"
+              >
+                <i data-lucide="download" class="h-4 w-4"></i>
+                <span data-i18n="hero.btnDownload">Télécharger pour Windows</span>
+              </a>
+              <a
+                href="https://github.com/xkddn/RootPass-App"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary w-full sm:w-auto"
+                aria-label="Voir le code source de RootPass sur GitHub"
+              >
+                <i data-lucide="code-2" class="h-4 w-4"></i>
+                <span data-i18n="hero.btnSource">Voir le code source</span>
+              </a>
+            </div>
+
+            <p
+              class="mt-7 font-mono text-xs uppercase tracking-[0.14em] text-faint"
+              data-i18n="hero.openSource"
             >
-              <i data-lucide="code-2" class="h-5 w-5"></i>
-              <span data-i18n="hero.btnSource">Voir le code source</span>
-            </a>
+              Open Source · Licence MIT · Gratuit pour toujours
+            </p>
           </div>
 
-          <p
-            class="mt-6 font-mono text-sm text-zinc-600"
-            data-i18n="hero.openSource"
+          <!-- Fiche technique (remplace le glow générique) -->
+          <aside
+            class="panel self-start p-0"
+            aria-label="Spécifications"
           >
-            Open Source · Licence MIT · Gratuit pour toujours
-          </p>
+            <div
+              class="flex items-center justify-between border-b border-[rgba(255,255,255,0.12)] px-5 py-3"
+            >
+              <span class="eyebrow">spec_sheet</span>
+              <span class="font-mono text-[11px] text-faint">rootpass.toml</span>
+            </div>
+            <dl class="divide-y divide-[rgba(255,255,255,0.08)]">
+              <div class="flex items-baseline justify-between px-5 py-3.5">
+                <dt class="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                  Chiffrement
+                </dt>
+                <dd class="font-mono text-[13px] font-medium text-ink">
+                  AES-256-GCM
+                </dd>
+              </div>
+              <div class="flex items-baseline justify-between px-5 py-3.5">
+                <dt class="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                  Stockage
+                </dt>
+                <dd class="font-mono text-[13px] font-medium text-ink">
+                  100 % local
+                </dd>
+              </div>
+              <div class="flex items-baseline justify-between px-5 py-3.5">
+                <dt class="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                  2FA
+                </dt>
+                <dd class="font-mono text-[13px] font-medium text-ink">
+                  TOTP natif
+                </dd>
+              </div>
+              <div class="flex items-baseline justify-between px-5 py-3.5">
+                <dt class="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                  Télémétrie
+                </dt>
+                <dd class="font-mono text-[13px] font-medium text-accent">
+                  aucune
+                </dd>
+              </div>
+              <div class="flex items-baseline justify-between px-5 py-3.5">
+                <dt class="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                  Licence
+                </dt>
+                <dd class="font-mono text-[13px] font-medium text-ink">MIT</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
+      <!-- ===================== FEATURES ===================== -->
       <section
         id="features"
-        class="px-6 py-12 sm:py-20"
+        class="border-b border-[rgba(255,255,255,0.12)]"
         aria-labelledby="features-title"
       >
-        <div class="mx-auto max-w-7xl">
-          <div class="mx-auto mb-14 max-w-2xl text-center">
+        <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="max-w-2xl">
+            <p class="eyebrow mb-5">[ 01 ] — fonctionnalités</p>
             <h2
               id="features-title"
-              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+              class="display text-3xl font-medium sm:text-[2.6rem]"
               data-i18n="features.title"
             >
               Conçu pour les paranoïaques.<br class="hidden sm:block" />
               Pensé pour le quotidien.
             </h2>
-            <p class="mt-4 text-zinc-400" data-i18n="features.subtitle">
+            <p class="mt-4 text-[15px] text-muted" data-i18n="features.subtitle">
               Toutes les garanties d'un coffre-fort chiffré, sans aucun
               compromis sur le confort.
             </p>
           </div>
 
-          <div class="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2">
-            <article class="bento-card flex flex-col">
-              <span
-                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-              >
-                <i data-lucide="lock" class="h-5 w-5"></i>
-              </span>
+          <div
+            class="mt-12 grid grid-cols-1 border-l border-t border-[rgba(255,255,255,0.12)] sm:grid-cols-2"
+          >
+            <article
+              class="flex flex-col border-b border-r border-[rgba(255,255,255,0.12)] p-7"
+            >
+              <div class="mb-5 flex items-center gap-3">
+                <i data-lucide="lock" class="h-5 w-5 text-accent"></i>
+                <span class="font-mono text-xs text-faint">01</span>
+              </div>
               <h3
-                class="text-lg font-semibold text-white"
+                class="display text-xl font-medium"
                 data-i18n="card.encryption.title"
               >
                 Chiffrement inviolable
               </h3>
               <p
-                class="mt-3 text-zinc-400 text-[15px]"
+                class="mt-3 text-[14px] leading-relaxed text-muted"
                 data-i18n="card.encryption.body"
               >
                 Votre coffre est protégé par
-                <strong class="text-zinc-200">AES-256-GCM</strong>, le même
-                standard que les agences gouvernementales. La clé est dérivée à
-                la volée à partir de votre Master Password - elle n'est jamais
-                stockée, nulle part.
+                <strong class="font-medium text-ink">AES-256-GCM</strong>, le
+                même standard que les agences gouvernementales. La clé est
+                dérivée à la volée à partir de votre Master Password - elle n'est
+                jamais stockée, nulle part.
               </p>
               <p
-                class="mt-6 inline-block self-start rounded-lg border border-white/[0.06] bg-black/30 px-4 py-2 font-mono text-xs text-emerald-300"
+                class="field mt-6 self-start text-accent"
                 data-i18n="card.encryption.badge"
               >
                 AES-256-GCM · clé dérivée au vol
               </p>
             </article>
 
-            <article class="bento-card">
-              <span
-                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-              >
-                <i data-lucide="cloud-off" class="h-5 w-5"></i>
-              </span>
+            <article
+              class="flex flex-col border-b border-r border-[rgba(255,255,255,0.12)] p-7"
+            >
+              <div class="mb-5 flex items-center gap-3">
+                <i data-lucide="cloud-off" class="h-5 w-5 text-accent"></i>
+                <span class="font-mono text-xs text-faint">02</span>
+              </div>
               <h3
-                class="text-lg font-semibold text-white"
+                class="display text-xl font-medium"
                 data-i18n="card.cloud.title"
               >
                 Le cloud vous appartient
               </h3>
               <p
-                class="mt-3 text-zinc-400 text-[15px]"
+                class="mt-3 text-[14px] leading-relaxed text-muted"
                 data-i18n="card.cloud.body"
               >
                 Synchronisez via votre propre OneDrive, Dropbox ou une simple
                 clé USB.
-                <strong class="text-zinc-200">Zéro serveur central</strong>, vos
-                données ne quittent jamais votre contrôle.
+                <strong class="font-medium text-ink">Zéro serveur central</strong
+                >, vos données ne quittent jamais votre contrôle.
               </p>
             </article>
 
-            <article class="bento-card">
-              <span
-                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-              >
-                <i data-lucide="shield-check" class="h-5 w-5"></i>
-              </span>
+            <article
+              class="flex flex-col border-b border-r border-[rgba(255,255,255,0.12)] p-7"
+            >
+              <div class="mb-5 flex items-center gap-3">
+                <i data-lucide="shield-check" class="h-5 w-5 text-accent"></i>
+                <span class="font-mono text-xs text-faint">03</span>
+              </div>
               <h3
-                class="text-lg font-semibold text-white"
+                class="display text-xl font-medium"
                 data-i18n="card.totp.title"
               >
                 2FA natif
               </h3>
               <p
-                class="mt-3 text-zinc-400 text-[15px]"
+                class="mt-3 text-[14px] leading-relaxed text-muted"
                 data-i18n="card.totp.body"
               >
                 Générez vos codes
-                <strong class="text-zinc-200">TOTP</strong> directement dans
-                l'application. Plus besoin d'une app tierce pour votre double
-                authentification.
+                <strong class="font-medium text-ink">TOTP</strong> directement
+                dans l'application. Plus besoin d'une app tierce pour votre
+                double authentification.
               </p>
             </article>
 
-            <article class="bento-card flex flex-col">
-              <span
-                class="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-              >
-                <i data-lucide="search" class="h-5 w-5"></i>
-              </span>
+            <article
+              class="flex flex-col border-b border-r border-[rgba(255,255,255,0.12)] p-7"
+            >
+              <div class="mb-5 flex items-center gap-3">
+                <i data-lucide="search" class="h-5 w-5 text-accent"></i>
+                <span class="font-mono text-xs text-faint">04</span>
+              </div>
               <h3
-                class="text-lg font-semibold text-white"
+                class="display text-xl font-medium"
                 data-i18n="card.spotlight.title"
               >
                 Recherche Spotlight
               </h3>
               <p
-                class="mt-3 text-zinc-400 text-[15px]"
+                class="mt-3 text-[14px] leading-relaxed text-muted"
                 data-i18n="card.spotlight.body"
               >
                 Un raccourci global pour tout retrouver en une seconde, sans
                 même ouvrir la fenêtre principale. Tapez, trouvez, collez.
               </p>
               <kbd
-                class="mt-6 inline-flex w-fit items-center gap-1 rounded-lg border border-white/[0.08] bg-black/30 px-3 py-2 font-mono text-xs text-zinc-300"
+                class="field mt-6 inline-flex w-fit items-center gap-1 text-ink"
               >
                 Ctrl + Shift + Space
               </kbd>
@@ -355,74 +413,71 @@
         </div>
       </section>
 
+      <!-- ===================== TELECHARGEMENT ===================== -->
       <section
         id="telechargement"
-        class="px-6 pb-16 sm:pb-24"
+        class="border-b border-[rgba(255,255,255,0.12)]"
         aria-labelledby="download-help-title"
       >
-        <div class="mx-auto max-w-5xl">
-          <div class="mx-auto mb-10 max-w-2xl text-center">
+        <div class="mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-24">
+          <div class="max-w-2xl">
+            <p class="eyebrow mb-5">[ 02 ] — installation</p>
             <h2
               id="download-help-title"
-              class="text-2xl font-bold tracking-tight text-white sm:text-3xl"
+              class="display text-3xl font-medium sm:text-[2.4rem]"
               data-i18n="download.title"
             >
               Télécharger en toute confiance
             </h2>
-            <p class="mt-3 text-zinc-400" data-i18n="download.subtitle">
-              Open source, builds publics et vérifiables. Voici comment
-              installer en quelques secondes.
+            <p class="mt-4 text-[15px] text-muted" data-i18n="download.subtitle">
+              Open source, builds publics et vérifiables. Voici comment installer
+              en quelques secondes.
             </p>
-
-            <div
-              class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
-            >
-              <a
-                id="download-exe"
-                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 sm:w-auto"
-              >
-                <i data-lucide="monitor" class="h-4 w-4"></i>
-                Windows (.exe)
-              </a>
-              <span
-                aria-disabled="true"
-                title="Encore en dev, bientôt !"
-                class="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-zinc-700/60 bg-zinc-800/40 px-4 py-2 text-[15px] font-medium text-zinc-500 sm:w-auto"
-              >
-                <i data-lucide="apple" class="h-4 w-4"></i>
-                <span data-i18n="download.mac.soon"
-                  >macOS : Encore en dev, bientôt !</span
-                >
-              </span>
-              <a
-                id="download-linux"
-                href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.AppImage"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[15px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 sm:w-auto"
-              >
-                <i data-lucide="terminal" class="h-4 w-4"></i>
-                Linux (AppImage / .deb)
-              </a>
-            </div>
           </div>
 
-          <!-- Bloc 3 - Note de réassurance -->
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              id="download-exe"
+              href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass-Setup.exe"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-[3px] border border-accent bg-accent px-4 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.06em] text-paper transition-colors hover:border-ink hover:bg-ink sm:w-auto"
+            >
+              <i data-lucide="monitor" class="h-4 w-4"></i>
+              Windows (.exe)
+            </a>
+            <a
+              id="download-linux"
+              href="https://github.com/xkddn/RootPass-App/releases/latest/download/RootPass.AppImage"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-[3px] border border-[rgba(255,255,255,0.2)] px-4 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.06em] text-ink transition-colors hover:bg-[rgba(255,255,255,0.06)] sm:w-auto"
+            >
+              <i data-lucide="terminal" class="h-4 w-4"></i>
+              Linux (AppImage / .deb)
+            </a>
+            <span
+              aria-disabled="true"
+              title="Encore en dev, bientôt !"
+              class="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-[3px] border border-dashed border-[rgba(255,255,255,0.16)] px-4 py-3 font-mono text-[13px] font-medium uppercase tracking-[0.06em] text-faint sm:w-auto"
+            >
+              <i data-lucide="apple" class="h-4 w-4"></i>
+              <span data-i18n="download.mac.soon"
+                >macOS : Encore en dev, bientôt !</span
+              >
+            </span>
+          </div>
+
+          <!-- Note : éditeur inconnu -->
           <div
-            class="mt-4 flex items-start gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/[0.04] px-5 py-4"
+            class="mt-6 flex items-start gap-3 border-l-2 border-accent bg-[rgba(31,184,122,0.08)] px-5 py-4"
           >
-            <i
-              data-lucide="info"
-              class="mt-0.5 h-5 w-5 shrink-0 text-amber-400"
-            ></i>
+            <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0 text-accent"></i>
             <p
-              class="text-[16px] leading-relaxed text-zinc-400"
+              class="text-[14px] leading-relaxed text-muted"
               data-i18n="download.note"
             >
-              <strong class="text-amber-300"
+              <strong class="text-ink"
                 >« Éditeur inconnu » au lancement ? C'est normal.</strong
               >
               <br />
@@ -439,100 +494,91 @@
             </p>
           </div>
 
+          <!-- Alerte master password -->
           <div
             role="alert"
-            class="mt-8 flex items-start gap-3.5 rounded-xl border border-red-500/25 bg-red-500/[0.06] px-5 py-4"
+            class="mt-4 flex items-start gap-3 border-l-2 border-[#ff7a5c] bg-[rgba(255,122,92,0.09)] px-5 py-4"
           >
             <i
               data-lucide="circle-alert"
-              class="mt-0.5 h-5 w-5 shrink-0 text-red-400/90"
+              class="mt-0.5 h-4 w-4 shrink-0 text-[#ff7a5c]"
             ></i>
             <p
-              class="text-[15px] leading-relaxed text-zinc-300"
+              class="text-[14px] leading-relaxed text-ink"
               data-i18n="alert.master"
             >
-              <strong class="font-semibold text-red-300"
+              <strong class="font-semibold text-[#ff7a5c]"
                 >Important : Sauvegardez votre Master Password !!!!</strong
               >
               <br />
               Si vous le perdez, le coffre est
-              <strong class="font-semibold text-white">IRRÉCUPÉRABLE</strong>.
-              Aucune réinitialisation n'est possible, même par moi. C'est le
-              prix du chiffrement de bout en bout. Soyez intelligent·e, notez-le
-              dans un endroit sûr et tout ira bien.
+              <strong class="font-semibold text-ink">IRRÉCUPÉRABLE</strong>.
+              Aucune réinitialisation n'est possible, même par moi. C'est le prix
+              du chiffrement de bout en bout. Soyez intelligent·e, notez-le dans
+              un endroit sûr et tout ira bien.
             </p>
           </div>
 
-          <div class="grid items-start gap-6 md:grid-cols-2 py-15">
-            <!-- Bloc 2 - Guide d'installation -->
-            <article
-              class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8"
-            >
-              <div class="flex items-center justify-center gap-3">
-                <span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-                >
-                  <i data-lucide="download" class="h-5 w-5"></i>
-                </span>
+          <div class="mt-10 grid items-start gap-4 md:grid-cols-2">
+            <!-- Guide d'installation -->
+            <article class="panel p-7 sm:p-8">
+              <div class="flex items-center gap-3 border-b border-[rgba(255,255,255,0.1)] pb-4">
+                <i data-lucide="download" class="h-4 w-4 text-accent"></i>
                 <h3
-                  class="text-lg font-semibold text-white"
+                  class="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ink"
                   data-i18n="install.title"
                 >
                   Installation rapide
                 </h3>
               </div>
 
-              <div class="mt-8 space-y-8">
+              <div class="mt-6 space-y-7">
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="monitor" class="h-4 w-4 text-muted"></i>
                     Windows
                   </p>
                   <ol
-                    class="mt-2 list-decimal space-y-1 pl-5 text-[16px] leading-relaxed text-zinc-400 marker:text-zinc-600"
+                    class="mt-2.5 list-decimal space-y-1 pl-5 text-[14px] leading-relaxed text-muted marker:text-faint"
                     data-i18n="install.win.steps"
                   >
                     <li>
                       Lancez le fichier
-                      <code class="font-mono text-zinc-300">.exe</code>.
+                      <code class="font-mono text-ink">.exe</code>.
                     </li>
                     <li>
                       Sur l'écran SmartScreen, cliquez sur
-                      <em class="not-italic text-zinc-300"
-                        >Informations complémentaires</em
-                      >.
+                      <em class="not-italic text-ink">Informations complémentaires</em>.
                     </li>
                     <li>
                       Cliquez sur
-                      <em class="not-italic text-zinc-300"
-                        >Exécuter quand même</em
-                      >.
+                      <em class="not-italic text-ink">Exécuter quand même</em>.
                     </li>
                   </ol>
                 </div>
 
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="apple" class="h-4 w-4 text-muted"></i>
                     macOS
                   </p>
                   <ol
-                    class="mt-2 list-decimal space-y-1 pl-5 text-[16px] leading-relaxed text-zinc-400 marker:text-zinc-600"
+                    class="mt-2.5 list-decimal space-y-1 pl-5 text-[14px] leading-relaxed text-muted marker:text-faint"
                     data-i18n="install.mac.steps"
                   >
                     <li>
                       Ouvrez le fichier
-                      <code class="font-mono text-zinc-300">.dmg</code>.
+                      <code class="font-mono text-ink">.dmg</code>.
                     </li>
                     <li>
                       Faites un
-                      <em class="not-italic text-zinc-300">clic droit</em>
+                      <em class="not-italic text-ink">clic droit</em>
                       sur l'application puis
-                      <em class="not-italic text-zinc-300">Ouvrir</em>.
+                      <em class="not-italic text-ink">Ouvrir</em>.
                     </li>
                     <li>Confirmez l'ouverture dans la fenêtre qui apparaît.</li>
                   </ol>
@@ -540,55 +586,45 @@
 
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="terminal" class="h-4 w-4 text-muted"></i>
                     Linux
                   </p>
                   <p
-                    class="mt-2 text-[16px] leading-relaxed text-zinc-400"
+                    class="mt-2.5 text-[14px] leading-relaxed text-muted"
                     data-i18n="install.linux.desc"
                   >
                     Rendez l'AppImage exécutable, ou installez le paquet
-                    <code class="font-mono text-zinc-300">.deb</code> :
+                    <code class="font-mono text-ink">.deb</code> :
                   </p>
-                  <p
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
-                  >
+                  <p class="field mt-3">
                     chmod +x RootPass*.AppImage &amp;&amp; ./RootPass*.AppImage
                   </p>
                 </div>
               </div>
             </article>
 
-            <!-- Bloc 1 - Confiance / Transparence (pleine largeur) -->
-            <article
-              class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8"
-            >
-              <div class="flex items-center justify-center gap-3">
-                <span
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-                >
-                  <i data-lucide="shield-check" class="h-5 w-5"></i>
-                </span>
+            <!-- Transparence / vérification -->
+            <article class="panel p-7 sm:p-8">
+              <div class="flex items-center gap-3 border-b border-[rgba(255,255,255,0.1)] pb-4">
+                <i data-lucide="shield-check" class="h-4 w-4 text-accent"></i>
                 <h3
-                  class="text-lg font-semibold text-white"
+                  class="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-ink"
                   data-i18n="verify.title"
                 >
                   Transparent et vérifiable
                 </h3>
               </div>
-              <div class="mt-2.5 flex justify-center">
-                <span
-                  class="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 text-[11px] font-medium text-amber-300/90"
-                  data-i18n="verify.optional"
-                >
-                  <i data-lucide="info" class="h-3 w-3"></i>
-                  Optionnel ! Seulement si tu veux vérifier l'intégrité de l'app
-                </span>
-              </div>
               <p
-                class="mx-auto mt-4 max-w-3xl text-center text-[16px] leading-relaxed text-zinc-400"
+                class="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] text-accent"
+                data-i18n="verify.optional"
+              >
+                <i data-lucide="info" class="h-3 w-3"></i>
+                Optionnel ! Seulement si tu veux vérifier l'intégrité de l'app
+              </p>
+              <p
+                class="mt-4 text-[14px] leading-relaxed text-muted"
                 data-i18n="verify.body"
               >
                 RootPass est
@@ -596,149 +632,87 @@
                   href="https://github.com/xkddn/RootPass-App"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="font-medium text-emerald-400 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-300"
+                  class="link"
                   >100 % open source</a
                 >. Chaque installeur est compilé automatiquement par GitHub
                 Actions à partir du code public, rien n'est ajouté à la main,
                 tout est traçable.
               </p>
 
-              <div class="mt-8 space-y-8">
-                <!-- Windows : téléchargement + vérification du checksum -->
+              <div class="mt-6 space-y-7">
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="monitor" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="monitor" class="h-4 w-4 text-muted"></i>
                     Windows
                   </p>
-                  <p
-                    class="mt-3 text-[14px] text-zinc-500"
-                    data-i18n="verify.win.desc"
-                  >
-                    Vérifiez l'intégrité : lancez cette commande dans
-                    PowerShell, puis comparez à l'empreinte officielle.
+                  <p class="mt-2.5 text-[13px] text-faint" data-i18n="verify.win.desc">
+                    Vérifiez l'intégrité : lancez cette commande dans PowerShell,
+                    puis comparez à l'empreinte officielle.
                   </p>
-                  <p
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
-                  >
-                    certutil -hashfile &lt;fichier&gt; SHA256
-                  </p>
-                  <p
-                    id="checksum-exe"
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
-                  >
-                    Chargement…
-                  </p>
+                  <p class="field mt-3">certutil -hashfile &lt;fichier&gt; SHA256</p>
+                  <p id="checksum-exe" class="field mt-2 text-accent">Chargement…</p>
                 </div>
 
-                <!-- macOS : téléchargement + vérification du checksum -->
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="apple" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="apple" class="h-4 w-4 text-muted"></i>
                     macOS
                   </p>
-                  <p
-                    class="mt-3 text-[14px] text-zinc-500"
-                    data-i18n="verify.mac.desc"
-                  >
+                  <p class="mt-2.5 text-[13px] text-faint" data-i18n="verify.mac.desc">
                     Vérifiez l'intégrité : lancez cette commande dans le
                     Terminal, puis comparez à l'empreinte officielle.
                   </p>
-                  <p
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
-                  >
-                    shasum -a 256 &lt;fichier&gt;
-                  </p>
-                  <p
-                    id="checksum-dmg"
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
-                  >
-                    Chargement…
-                  </p>
+                  <p class="field mt-3">shasum -a 256 &lt;fichier&gt;</p>
+                  <p id="checksum-dmg" class="field mt-2 text-accent">Chargement…</p>
                 </div>
 
-                <!-- Linux : téléchargement + vérification du checksum -->
                 <div>
                   <p
-                    class="flex items-center gap-2 text-[16px] font-semibold text-zinc-200"
+                    class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink"
                   >
-                    <i data-lucide="terminal" class="h-4 w-4 text-zinc-400"></i>
+                    <i data-lucide="terminal" class="h-4 w-4 text-muted"></i>
                     Linux
                   </p>
-                  <p
-                    class="mt-3 text-[14px] text-zinc-500"
-                    data-i18n="verify.linux.desc"
-                  >
+                  <p class="mt-2.5 text-[13px] text-faint" data-i18n="verify.linux.desc">
                     Vérifiez l'intégrité : lancez cette commande dans le
                     terminal, puis comparez à l'empreinte officielle.
                   </p>
-                  <p
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-zinc-300"
-                  >
-                    sha256sum &lt;fichier&gt;
-                  </p>
-                  <p
-                    id="checksum-linux"
-                    class="mt-3 break-all rounded-lg border border-white/[0.06] bg-black/30 px-3 py-2.5 font-mono text-[14px] text-emerald-300"
-                  >
-                    Chargement…
-                  </p>
+                  <p class="field mt-3">sha256sum &lt;fichier&gt;</p>
+                  <p id="checksum-linux" class="field mt-2 text-accent">Chargement…</p>
                 </div>
               </div>
-
-              <!-- <p class="mt-6 text-[16px] leading-relaxed text-zinc-400">
-                Vous pouvez aussi consulter l'analyse antivirus indépendante sur
-                <a
-                  href="&lt;LIEN_VIRUSTOTAL_ICI&gt;"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="font-medium text-emerald-400 underline decoration-emerald-400/40 underline-offset-2 hover:text-emerald-300"
-                  >VirusTotal</a
-                >.
-              </p> -->
             </article>
           </div>
         </div>
       </section>
+
+      <!-- ===================== CONTACT ===================== -->
       <section
         id="contact"
-        class="px-6 pb-20 sm:pb-28"
+        class="border-b border-[rgba(255,255,255,0.12)]"
         aria-labelledby="contact-title"
       >
-        <div class="mx-auto max-w-2xl text-center">
-          <span
-            class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-inset ring-emerald-500/20"
-          >
-            <i data-lucide="message-circle" class="h-6 w-6"></i>
-          </span>
+        <div class="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-24 text-center">
+          <p class="eyebrow mb-5 justify-center">[ 03 ] — contact</p>
           <h2
             id="contact-title"
-            class="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            class="display text-3xl font-medium sm:text-[2.6rem]"
             data-i18n="contact.title"
           >
             Une question ? Une idée ?
           </h2>
-          <p class="mt-4 text-zinc-400" data-i18n="contact.subtitle">
+          <p class="mx-auto mt-4 max-w-md text-[15px] text-muted" data-i18n="contact.subtitle">
             Que ce soit pour un bug, une suggestion : GitHub est le meilleur
             endroit pour me contacter.
           </p>
 
           <div
-            class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
-            <a
-              href="https://github.com/xkddn"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-secondary w-full sm:w-auto"
-              aria-label="Voir le profil GitHub"
-            >
-              <i data-lucide="github" class="h-4 w-4"></i>
-              <span data-i18n="contact.btnProfile">Mon profil GitHub</span>
-            </a>
             <a
               href="https://github.com/xkddn/RootPass-App/issues/new"
               target="_blank"
@@ -749,10 +723,20 @@
               <i data-lucide="message-circle" class="h-4 w-4"></i>
               <span data-i18n="contact.btnIssue">Ouvrir une issue</span>
             </a>
+            <a
+              href="https://github.com/xkddn"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary w-full sm:w-auto"
+              aria-label="Voir le profil GitHub"
+            >
+              <i data-lucide="github" class="h-4 w-4"></i>
+              <span data-i18n="contact.btnProfile">Mon profil GitHub</span>
+            </a>
           </div>
 
           <p
-            class="mt-6 font-mono text-sm text-zinc-600"
+            class="mt-7 font-mono text-xs uppercase tracking-[0.14em] text-faint"
             data-i18n="contact.note"
           >
             Réponse sous 24–48 h en général.
@@ -761,63 +745,57 @@
       </section>
     </main>
 
-    <footer class="border-t border-white/[0.06] px-6 py-12">
-      <div class="mx-auto max-w-7xl">
-        <div
-          class="flex flex-col items-center justify-between gap-6 sm:flex-row"
-        >
-          <div class="flex items-center gap-2.5">
-            <img
-              src="/logo.svg"
-              alt=""
-              width="32"
-              height="32"
-              class="h-8 w-8"
-            />
-            <span class="font-semibold text-white">RootPass</span>
-            <span
-              class="font-mono text-xs text-zinc-600"
-              data-i18n="footer.tagline"
-              >· 100 % Open Source · Licence MIT</span
-            >
-          </div>
-
-          <nav
-            class="flex items-center gap-5 text-sm"
-            aria-label="Liens du pied de page"
+    <footer class="px-5 py-10 sm:px-8">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row"
+      >
+        <div class="flex items-center gap-2.5">
+          <img src="/logo.svg" alt="" width="26" height="26" class="h-6 w-6" />
+          <span class="font-mono text-sm font-semibold text-ink">RootPass</span>
+          <span
+            class="font-mono text-[11px] text-faint"
+            data-i18n="footer.tagline"
+            >· 100 % Open Source · Licence MIT</span
           >
-            <a
-              href="https://github.com/xkddn/RootPass-App"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-zinc-500 transition-colors hover:text-white"
-              data-i18n="footer.source"
-              >Code source</a
-            >
-            <a
-              href="https://github.com/xkddn/RootPass-App/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-zinc-500 transition-colors hover:text-white"
-              >Issues</a
-            >
-            <a
-              href="https://github.com/xkddn/RootPass-App/releases"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-zinc-500 transition-colors hover:text-white"
-              >Releases</a
-            >
-          </nav>
         </div>
 
-        <p class="mt-8 text-center text-xs text-zinc-600">
-          © <span id="current-year">2026</span>
-          <span data-i18n="footer.rights"
-            >RootPass. Tous droits réservés sous licence MIT.</span
+        <nav
+          class="flex items-center gap-5 font-mono text-xs uppercase tracking-[0.1em]"
+          aria-label="Liens du pied de page"
+        >
+          <a
+            href="https://github.com/xkddn/RootPass-App"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted transition-colors hover:text-ink"
+            data-i18n="footer.source"
+            >Code source</a
           >
-        </p>
+          <a
+            href="https://github.com/xkddn/RootPass-App/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted transition-colors hover:text-ink"
+            >Issues</a
+          >
+          <a
+            href="https://github.com/xkddn/RootPass-App/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted transition-colors hover:text-ink"
+            >Releases</a
+          >
+        </nav>
       </div>
+
+      <p
+        class="mx-auto mt-8 max-w-6xl text-center font-mono text-[11px] text-faint sm:text-left"
+      >
+        © <span id="current-year">2026</span>
+        <span data-i18n="footer.rights"
+          >RootPass. Tous droits réservés sous licence MIT.</span
+        >
+      </p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
